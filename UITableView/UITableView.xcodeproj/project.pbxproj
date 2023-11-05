@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E3FB3F72AF7C93300EE21E7 /* PhotosSettingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3FB3F62AF7C93300EE21E7 /* PhotosSettingItem.swift */; };
+		9E3FB3F92AF7D5B300EE21E7 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3FB3F82AF7D5B300EE21E7 /* SwitchTableViewCell.swift */; };
 		9EF218462AF7726000189DF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF218452AF7726000189DF9 /* AppDelegate.swift */; };
 		9EF218482AF7726000189DF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF218472AF7726000189DF9 /* SceneDelegate.swift */; };
 		9EF2184D2AF7726000189DF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EF2184B2AF7726000189DF9 /* Main.storyboard */; };
@@ -18,9 +20,9 @@
 		9EF218632AF774C200189DF9 /* MultiSection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EF218622AF774C200189DF9 /* MultiSection.storyboard */; };
 		9EF218652AF774D900189DF9 /* MultiSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF218642AF774D900189DF9 /* MultiSectionViewController.swift */; };
 		9EF218682AF7751C00189DF9 /* SeperatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF218672AF7751C00189DF9 /* SeperatorViewController.swift */; };
-		9EF2186A2AF7752100189DF9 /* Seperator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EF218692AF7752100189DF9 /* Seperator.storyboard */; };
-		9EF2186D2AF7755600189DF9 /* EstimatedHeight.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EF2186C2AF7755600189DF9 /* EstimatedHeight.storyboard */; };
-		9EF2186F2AF7756100189DF9 /* EstimatedHeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF2186E2AF7756100189DF9 /* EstimatedHeightViewController.swift */; };
+		9EF2186A2AF7752100189DF9 /* Separator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EF218692AF7752100189DF9 /* Separator.storyboard */; };
+		9EF2186D2AF7755600189DF9 /* SelfSizing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EF2186C2AF7755600189DF9 /* SelfSizing.storyboard */; };
+		9EF2186F2AF7756100189DF9 /* SelfSizingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF2186E2AF7756100189DF9 /* SelfSizingViewController.swift */; };
 		9EF218722AF7757C00189DF9 /* CustomCell.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EF218712AF7757C00189DF9 /* CustomCell.storyboard */; };
 		9EF218742AF7758200189DF9 /* CustomCellTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF218732AF7758200189DF9 /* CustomCellTableViewController.swift */; };
 		9EF218772AF775BA00189DF9 /* SectionIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF218762AF775BA00189DF9 /* SectionIndexViewController.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E3FB3F62AF7C93300EE21E7 /* PhotosSettingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosSettingItem.swift; sourceTree = "<group>"; };
+		9E3FB3F82AF7D5B300EE21E7 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		9EF218422AF7726000189DF9 /* UITableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EF218452AF7726000189DF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EF218472AF7726000189DF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,9 +57,9 @@
 		9EF218622AF774C200189DF9 /* MultiSection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MultiSection.storyboard; sourceTree = "<group>"; };
 		9EF218642AF774D900189DF9 /* MultiSectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSectionViewController.swift; sourceTree = "<group>"; };
 		9EF218672AF7751C00189DF9 /* SeperatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeperatorViewController.swift; sourceTree = "<group>"; };
-		9EF218692AF7752100189DF9 /* Seperator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Seperator.storyboard; sourceTree = "<group>"; };
-		9EF2186C2AF7755600189DF9 /* EstimatedHeight.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EstimatedHeight.storyboard; sourceTree = "<group>"; };
-		9EF2186E2AF7756100189DF9 /* EstimatedHeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatedHeightViewController.swift; sourceTree = "<group>"; };
+		9EF218692AF7752100189DF9 /* Separator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Separator.storyboard; sourceTree = "<group>"; };
+		9EF2186C2AF7755600189DF9 /* SelfSizing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelfSizing.storyboard; sourceTree = "<group>"; };
+		9EF2186E2AF7756100189DF9 /* SelfSizingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizingViewController.swift; sourceTree = "<group>"; };
 		9EF218712AF7757C00189DF9 /* CustomCell.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomCell.storyboard; sourceTree = "<group>"; };
 		9EF218732AF7758200189DF9 /* CustomCellTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellTableViewController.swift; sourceTree = "<group>"; };
 		9EF218762AF775BA00189DF9 /* SectionIndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionIndexViewController.swift; sourceTree = "<group>"; };
@@ -106,12 +110,12 @@
 			children = (
 				9EF218452AF7726000189DF9 /* AppDelegate.swift */,
 				9EF218472AF7726000189DF9 /* SceneDelegate.swift */,
-				9EF218602AF7748800189DF9 /* Models */,
 				9EF2184B2AF7726000189DF9 /* Main.storyboard */,
+				9EF218602AF7748800189DF9 /* Models */,
 				9EF2185B2AF773C400189DF9 /* Basic */,
 				9EF218612AF774B900189DF9 /* MultiSection */,
-				9EF218662AF7751200189DF9 /* Seperator */,
-				9EF2186B2AF7754700189DF9 /* EstimatedHeight */,
+				9EF218662AF7751200189DF9 /* Separator */,
+				9EF2186B2AF7754700189DF9 /* SelfSizing */,
 				9EF218702AF7756E00189DF9 /* CustomCell */,
 				9EF218752AF775B000189DF9 /* SectionIndex */,
 				9EF2187A2AF775F700189DF9 /* SingleSelection */,
@@ -140,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				9EF218592AF773BC00189DF9 /* RandomNumber.swift */,
+				9E3FB3F62AF7C93300EE21E7 /* PhotosSettingItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -149,26 +154,27 @@
 			children = (
 				9EF218622AF774C200189DF9 /* MultiSection.storyboard */,
 				9EF218642AF774D900189DF9 /* MultiSectionViewController.swift */,
+				9E3FB3F82AF7D5B300EE21E7 /* SwitchTableViewCell.swift */,
 			);
 			path = MultiSection;
 			sourceTree = "<group>";
 		};
-		9EF218662AF7751200189DF9 /* Seperator */ = {
+		9EF218662AF7751200189DF9 /* Separator */ = {
 			isa = PBXGroup;
 			children = (
-				9EF218692AF7752100189DF9 /* Seperator.storyboard */,
+				9EF218692AF7752100189DF9 /* Separator.storyboard */,
 				9EF218672AF7751C00189DF9 /* SeperatorViewController.swift */,
 			);
-			path = Seperator;
+			path = Separator;
 			sourceTree = "<group>";
 		};
-		9EF2186B2AF7754700189DF9 /* EstimatedHeight */ = {
+		9EF2186B2AF7754700189DF9 /* SelfSizing */ = {
 			isa = PBXGroup;
 			children = (
-				9EF2186C2AF7755600189DF9 /* EstimatedHeight.storyboard */,
-				9EF2186E2AF7756100189DF9 /* EstimatedHeightViewController.swift */,
+				9EF2186C2AF7755600189DF9 /* SelfSizing.storyboard */,
+				9EF2186E2AF7756100189DF9 /* SelfSizingViewController.swift */,
 			);
-			path = EstimatedHeight;
+			path = SelfSizing;
 			sourceTree = "<group>";
 		};
 		9EF218702AF7756E00189DF9 /* CustomCell */ = {
@@ -301,14 +307,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EF2186D2AF7755600189DF9 /* EstimatedHeight.storyboard in Resources */,
+				9EF2186D2AF7755600189DF9 /* SelfSizing.storyboard in Resources */,
 				9EF218882AF776BA00189DF9 /* EditMode.storyboard in Resources */,
 				9EF2188D2AF776DE00189DF9 /* Reordering.storyboard in Resources */,
 				9EF218522AF7726100189DF9 /* LaunchScreen.storyboard in Resources */,
 				9EF218632AF774C200189DF9 /* MultiSection.storyboard in Resources */,
 				9EF218952AF7772B00189DF9 /* Prefetching.storyboard in Resources */,
 				9EF218922AF7770500189DF9 /* SwipeAction.storyboard in Resources */,
-				9EF2186A2AF7752100189DF9 /* Seperator.storyboard in Resources */,
+				9EF2186A2AF7752100189DF9 /* Separator.storyboard in Resources */,
 				9EF2185F2AF773D200189DF9 /* Basic.storyboard in Resources */,
 				9EF218792AF775BF00189DF9 /* SectionIndex.storyboard in Resources */,
 				9EF2184F2AF7726100189DF9 /* Assets.xcassets in Resources */,
@@ -328,9 +334,11 @@
 			files = (
 				9EF218742AF7758200189DF9 /* CustomCellTableViewController.swift in Sources */,
 				9EF2188B2AF776D800189DF9 /* ReorderingViewController.swift in Sources */,
-				9EF2186F2AF7756100189DF9 /* EstimatedHeightViewController.swift in Sources */,
+				9E3FB3F92AF7D5B300EE21E7 /* SwitchTableViewCell.swift in Sources */,
+				9EF2186F2AF7756100189DF9 /* SelfSizingViewController.swift in Sources */,
 				9EF218462AF7726000189DF9 /* AppDelegate.swift in Sources */,
 				9EF2185D2AF773CE00189DF9 /* BasicViewController.swift in Sources */,
+				9E3FB3F72AF7C93300EE21E7 /* PhotosSettingItem.swift in Sources */,
 				9EF218972AF7773000189DF9 /* PrefetchingViewController.swift in Sources */,
 				9EF218482AF7726000189DF9 /* SceneDelegate.swift in Sources */,
 				9EF218862AF776B500189DF9 /* EditModeViewController.swift in Sources */,
