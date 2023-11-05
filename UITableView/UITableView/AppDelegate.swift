@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  UITableView
 //
-//  Created by 김건우 on 10/14/23.
+//  Created by 김건우 on 11/5/23.
 //
 
 import UIKit
@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        print(RandomNumber.generateData())
         return true
     }
 
