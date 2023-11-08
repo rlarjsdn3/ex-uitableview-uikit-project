@@ -353,10 +353,10 @@
             </objects>
             <point key="canvasLocation" x="1699" y="-168"/>
         </scene>
-        <!--EditMode-->
+        <!--EdtMode-->
         <scene sceneID="CXL-SX-UER">
             <objects>
-                <viewControllerPlaceholder storyboardName="EditMode" id="Ta3-n9-yE0" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="EditMode" referencedIdentifier="EdtMode" id="Ta3-n9-yE0" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="d0B-Ap-qPt"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uq7-5R-baM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -366,7 +366,7 @@
         <!--Reordering-->
         <scene sceneID="lpV-BO-S0Q">
             <objects>
-                <viewControllerPlaceholder storyboardName="Reordering" id="Thh-MO-A3o" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Reordering" referencedIdentifier="Reordering" id="Thh-MO-A3o" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="KPQ-KH-41k"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AGr-b5-N3t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

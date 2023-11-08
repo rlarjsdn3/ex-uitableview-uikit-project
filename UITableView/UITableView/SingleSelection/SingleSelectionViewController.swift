@@ -51,7 +51,7 @@ class SingleSelectionViewController: UIViewController {
 extension SingleSelectionViewController: UITableViewDelegate {
     
     // ⭐️ 셀이 선택되기 전에 호출되는 델리게이트 메서드
-    // 해당 셀릐 선택 유무를 결정할 수 있음.
+    // 해당 셀의 선택 유무를 결정할 수 있음.
     // indexPath를 반환하면 선택 가능, nil을 반환하면 선택 불가능
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         if indexPath.row == 0 {
