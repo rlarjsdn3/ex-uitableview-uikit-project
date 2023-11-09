@@ -56,6 +56,14 @@
 		9EF218922AF7770500189DF9 /* SwipeAction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EF218912AF7770500189DF9 /* SwipeAction.storyboard */; };
 		9EF218952AF7772B00189DF9 /* Prefetching.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EF218942AF7772B00189DF9 /* Prefetching.storyboard */; };
 		9EF218972AF7773000189DF9 /* PrefetchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF218962AF7773000189DF9 /* PrefetchingViewController.swift */; };
+		9EF4E3972AFCC2C300CE17B7 /* CustomFoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF4E3962AFCC2C300CE17B7 /* CustomFoodCell.swift */; };
+		9EF4E39A2AFCCBC800CE17B7 /* CustomConfig.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EF4E3992AFCCBC800CE17B7 /* CustomConfig.storyboard */; };
+		9EF4E39C2AFCCBD200CE17B7 /* CustomConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF4E39B2AFCCBD200CE17B7 /* CustomConfigViewController.swift */; };
+		9EF4E39E2AFCF10D00CE17B7 /* CustomConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF4E39D2AFCF10D00CE17B7 /* CustomConfig.swift */; };
+		9EF4E3A22AFCF56900CE17B7 /* CustomConfigFoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF4E3A12AFCF56900CE17B7 /* CustomConfigFoodCell.swift */; };
+		9EF4E3A52AFCFABF00CE17B7 /* EditRows.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EF4E3A42AFCFABF00CE17B7 /* EditRows.storyboard */; };
+		9EF4E3A72AFCFACB00CE17B7 /* EditRowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF4E3A62AFCFACB00CE17B7 /* EditRowsViewController.swift */; };
+		9EF4E3A92AFCFC6400CE17B7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF4E3A82AFCFC6400CE17B7 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +118,14 @@
 		9EF218912AF7770500189DF9 /* SwipeAction.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SwipeAction.storyboard; sourceTree = "<group>"; };
 		9EF218942AF7772B00189DF9 /* Prefetching.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Prefetching.storyboard; sourceTree = "<group>"; };
 		9EF218962AF7773000189DF9 /* PrefetchingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefetchingViewController.swift; sourceTree = "<group>"; };
+		9EF4E3962AFCC2C300CE17B7 /* CustomFoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFoodCell.swift; sourceTree = "<group>"; };
+		9EF4E3992AFCCBC800CE17B7 /* CustomConfig.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomConfig.storyboard; sourceTree = "<group>"; };
+		9EF4E39B2AFCCBD200CE17B7 /* CustomConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomConfigViewController.swift; sourceTree = "<group>"; };
+		9EF4E39D2AFCF10D00CE17B7 /* CustomConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomConfig.swift; sourceTree = "<group>"; };
+		9EF4E3A12AFCF56900CE17B7 /* CustomConfigFoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomConfigFoodCell.swift; sourceTree = "<group>"; };
+		9EF4E3A42AFCFABF00CE17B7 /* EditRows.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditRows.storyboard; sourceTree = "<group>"; };
+		9EF4E3A62AFCFACB00CE17B7 /* EditRowsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRowsViewController.swift; sourceTree = "<group>"; };
+		9EF4E3A82AFCFC6400CE17B7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +166,8 @@
 				9E385C0C2AFBB9DE00E155EB /* State */,
 				9E385C112AFBC80400E155EB /* Cell Subclass */,
 				9E385C182AFBCBD800E155EB /* CustomCellConfig */,
+				9EF4E3982AFCCBBB00CE17B7 /* CustomConfig */,
+				9EF4E3A32AFCFAB300CE17B7 /* Edit Rows */,
 			);
 			path = DiffableDataSource;
 			sourceTree = "<group>";
@@ -196,6 +214,7 @@
 			children = (
 				9E385C1D2AFBCC1D00E155EB /* CustomCellConfig.storyboard */,
 				9E385C1B2AFBCC1700E155EB /* CustomCellConfigViewController.swift */,
+				9EF4E3962AFCC2C300CE17B7 /* CustomFoodCell.swift */,
 			);
 			path = CustomCellConfig;
 			sourceTree = "<group>";
@@ -356,6 +375,27 @@
 			path = Prefetching;
 			sourceTree = "<group>";
 		};
+		9EF4E3982AFCCBBB00CE17B7 /* CustomConfig */ = {
+			isa = PBXGroup;
+			children = (
+				9EF4E3992AFCCBC800CE17B7 /* CustomConfig.storyboard */,
+				9EF4E39B2AFCCBD200CE17B7 /* CustomConfigViewController.swift */,
+				9EF4E3A12AFCF56900CE17B7 /* CustomConfigFoodCell.swift */,
+				9EF4E39D2AFCF10D00CE17B7 /* CustomConfig.swift */,
+			);
+			path = CustomConfig;
+			sourceTree = "<group>";
+		};
+		9EF4E3A32AFCFAB300CE17B7 /* Edit Rows */ = {
+			isa = PBXGroup;
+			children = (
+				9EF4E3A42AFCFABF00CE17B7 /* EditRows.storyboard */,
+				9EF4E3A62AFCFACB00CE17B7 /* EditRowsViewController.swift */,
+				9EF4E3A82AFCFC6400CE17B7 /* DetailViewController.swift */,
+			);
+			path = "Edit Rows";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -421,9 +461,11 @@
 				9EF2188D2AF776DE00189DF9 /* Reordering.storyboard in Resources */,
 				9EF218522AF7726100189DF9 /* LaunchScreen.storyboard in Resources */,
 				9EF218632AF774C200189DF9 /* MultiSection.storyboard in Resources */,
+				9EF4E39A2AFCCBC800CE17B7 /* CustomConfig.storyboard in Resources */,
 				9E385C092AFBB48400E155EB /* Background.storyboard in Resources */,
 				9EF218952AF7772B00189DF9 /* Prefetching.storyboard in Resources */,
 				9E385C102AFBB9F100E155EB /* State.storyboard in Resources */,
+				9EF4E3A52AFCFABF00CE17B7 /* EditRows.storyboard in Resources */,
 				9E485CA62AFB692D00FE59E7 /* CustomTableViewCell.xib in Resources */,
 				9E385C152AFBC81D00E155EB /* CellSubclass.storyboard in Resources */,
 				9EF218922AF7770500189DF9 /* SwipeAction.storyboard in Resources */,
@@ -445,8 +487,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EF4E3A72AFCFACB00CE17B7 /* EditRowsViewController.swift in Sources */,
+				9EF4E3A92AFCFC6400CE17B7 /* DetailViewController.swift in Sources */,
 				9E385C0B2AFBB48A00E155EB /* BackgroundViewController.swift in Sources */,
 				9EF218742AF7758200189DF9 /* CustomCellTableViewController.swift in Sources */,
+				9EF4E3972AFCC2C300CE17B7 /* CustomFoodCell.swift in Sources */,
 				9EF2188B2AF776D800189DF9 /* ReorderingViewController.swift in Sources */,
 				9E3FB3F92AF7D5B300EE21E7 /* SwitchTableViewCell.swift in Sources */,
 				9E385C0E2AFBB9EC00E155EB /* StateViewController.swift in Sources */,
@@ -456,7 +501,9 @@
 				9EF218462AF7726000189DF9 /* AppDelegate.swift in Sources */,
 				9EF2185D2AF773CE00189DF9 /* BasicViewController.swift in Sources */,
 				9E3FB3F72AF7C93300EE21E7 /* PhotosSettingItem.swift in Sources */,
+				9EF4E39C2AFCCBD200CE17B7 /* CustomConfigViewController.swift in Sources */,
 				9EF218972AF7773000189DF9 /* PrefetchingViewController.swift in Sources */,
+				9EF4E3A22AFCF56900CE17B7 /* CustomConfigFoodCell.swift in Sources */,
 				9EF218482AF7726000189DF9 /* SceneDelegate.swift in Sources */,
 				9EF218862AF776B500189DF9 /* EditModeViewController.swift in Sources */,
 				9EF218772AF775BA00189DF9 /* SectionIndexViewController.swift in Sources */,
@@ -473,6 +520,7 @@
 				9E485C9E2AFB633000FE59E7 /* Landscape.swift in Sources */,
 				9E385C172AFBC8F800E155EB /* FoodCell.swift in Sources */,
 				9EF2187E2AF7760800189DF9 /* SingleSelectionViewController.swift in Sources */,
+				9EF4E39E2AFCF10D00CE17B7 /* CustomConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

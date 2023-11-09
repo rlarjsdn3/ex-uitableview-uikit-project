@@ -16,6 +16,7 @@ class DiffableDataSourceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
         prepareDataSource()
         prepareSnapshot()
     }
