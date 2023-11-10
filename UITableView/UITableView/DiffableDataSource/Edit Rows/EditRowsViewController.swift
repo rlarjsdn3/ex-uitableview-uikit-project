@@ -12,7 +12,6 @@ class EditRowsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var selected: ItemsData!
-    var appData: ApplicationData = ApplicationData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,10 +40,10 @@ class EditRowsViewController: UIViewController {
     }
     
     func prepareDatasource() {
-        appData.dataSource = UITableViewDiffableDataSource<Sections, ItemsData.ID>(tableView: tableView) { tableView, indexPath, itemID in
+        AppData.dataSource = FoodDataSource(tableView: tableView) { tableView, indexPath, itemID in
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
             
-            if let item = self.appData.items.first(where: { $0.id == itemID }) {
+            if let item = AppData.items.first(where: { $0.id == itemID }) {
                 var contentConfig = cell.defaultContentConfiguration()
                 contentConfig.text = item.name
                 cell.contentConfiguration = contentConfig
@@ -57,22 +56,52 @@ class EditRowsViewController: UIViewController {
     func prepareSnapshot() {
         var snapshot = NSDiffableDataSourceSnapshot<Sections, ItemsData.ID>()
         snapshot.appendSections([.main])
-        snapshot.appendItems(appData.items.map { $0.id })
-        appData.dataSource.apply(snapshot)
+        snapshot.appendItems(AppData.items.map { $0.id })
+        AppData.dataSource.apply(snapshot)
     }
     
-
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "goToAddVC", sender: self)
+    }
+    
+    @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
+        if tableView.isEditing {
+            tableView.setEditing(false, animated: true)
+        } else {
+            tableView.setEditing(true, animated: true)
+        }
+    }
+    
 }
 
 extension EditRowsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let itemID = appData.dataSource.itemIdentifier(for: indexPath) {
-            if let item = appData.items.first(where: { $0.id == itemID }) {
+        if let itemID = AppData.dataSource.itemIdentifier(for: indexPath) {
+            if let item = AppData.items.first(where: { $0.id == itemID }) {
                 selected = item
             }
         }
         performSegue(withIdentifier: "goToDetailVC", sender: self)
+    }
+    
+    // ✏️ 이 메서드는 FoodDataSource에 구현되어 있는 tableView(UITableView, commit:, forRowAt:) 메서드를 대체함.
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let button = UIContextualAction(style: .normal, title: "Remove") { action, view, completion in
+            if let itemID = AppData.dataSource.itemIdentifier(for: indexPath) {
+                AppData.items.removeAll(where: { $0.id == itemID })
+                
+                var currentSnapshot = AppData.dataSource.snapshot()
+                currentSnapshot.deleteItems([itemID])
+                AppData.dataSource.apply(currentSnapshot)
+            }
+            completion(true)
+        }
+        button.backgroundColor = UIColor.systemBlue
+        
+        var config = UISwipeActionsConfiguration(actions: [button])
+        config.performsFirstActionWithFullSwipe = false
+        return config
     }
     
 }

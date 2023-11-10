@@ -54,4 +54,4 @@ struct ApplicationData {
         items.append(ItemsData("Yogurt", "yogurt", 59, false))
     }
 }
-var AppData = ApplicationData()
+var AppData: ApplicationData = ApplicationData()

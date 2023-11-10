@@ -31,16 +31,82 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Groceries" id="reG-2f-6Lf">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mxT-Zs-uGa"/>
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="bVY-R8-jpM">
+                            <connections>
+                                <action selector="editButtonPressed:" destination="Y6W-OH-hqX" id="q0r-Bu-dza"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mxT-Zs-uGa">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="Y6W-OH-hqX" id="GEJ-uN-5zc"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Bkf-ud-Txh" id="XIl-aN-hGB"/>
                         <segue destination="HaU-2a-Yka" kind="show" identifier="goToDetailVC" id="vyn-eB-8DW"/>
+                        <segue destination="W1I-3s-IDT" kind="show" identifier="goToAddVC" id="Anj-XE-ruv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="774.80916030534343" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="799" y="-2"/>
+        </scene>
+        <!--Add Item View Controller-->
+        <scene sceneID="P8Z-UQ-QGf">
+            <objects>
+                <viewController id="W1I-3s-IDT" customClass="AddItemViewController" customModule="UITableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dww-IX-Ppg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XXS-yE-1KT">
+                                <rect key="frame" x="16" y="103" width="361" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Item: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5HI-Lb-826">
+                                        <rect key="frame" x="0.0" y="0.0" width="126.66666666666667" height="34"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bJ2-uM-6Ei">
+                                        <rect key="frame" x="134.66666666666663" y="0.0" width="226.33333333333337" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p30-Xo-rZG">
+                                <rect key="frame" x="297" y="145" width="80" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Lii-9E-qrT"/>
+                                    <constraint firstAttribute="height" constant="35" id="ZGE-GO-Rp0"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save"/>
+                                <connections>
+                                    <action selector="saveItem:" destination="W1I-3s-IDT" eventType="touchUpInside" id="LTp-Zm-vpc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xez-7B-ABW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XXS-yE-1KT" firstAttribute="leading" secondItem="xez-7B-ABW" secondAttribute="leading" constant="16" id="5Ve-eA-0s7"/>
+                            <constraint firstItem="p30-Xo-rZG" firstAttribute="top" secondItem="XXS-yE-1KT" secondAttribute="bottom" constant="8" id="Ftg-1j-Fav"/>
+                            <constraint firstItem="XXS-yE-1KT" firstAttribute="top" secondItem="xez-7B-ABW" secondAttribute="top" id="aS5-5o-FVH"/>
+                            <constraint firstItem="xez-7B-ABW" firstAttribute="trailing" secondItem="p30-Xo-rZG" secondAttribute="trailing" constant="16" id="mXJ-2E-N8c"/>
+                            <constraint firstItem="xez-7B-ABW" firstAttribute="trailing" secondItem="XXS-yE-1KT" secondAttribute="trailing" constant="16" id="v7h-Pw-mfc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Sww-d8-TCW"/>
+                    <connections>
+                        <outlet property="textField" destination="bJ2-uM-6Ei" id="S5W-pt-vp8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wJk-qZ-v0H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1713.740458015267" y="-366.19718309859155"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="wmA-ZS-yKT">
@@ -78,28 +144,104 @@
                                     <constraint firstAttribute="width" secondItem="lkw-J7-7a7" secondAttribute="height" multiplier="1:1" id="sPH-s1-l5y"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIT-3k-FPN">
+                                <rect key="frame" x="264" y="272" width="73.333333333333314" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteButtonPressed:" destination="HaU-2a-Yka" eventType="touchUpInside" id="Oeh-Cs-bfY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IUK-5b-ULf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="kIT-3k-FPN" firstAttribute="top" secondItem="lkw-J7-7a7" secondAttribute="bottom" constant="8" id="IA0-0X-byP"/>
                             <constraint firstItem="lkw-J7-7a7" firstAttribute="top" secondItem="IUK-5b-ULf" secondAttribute="top" constant="8" id="K0t-5Q-JV8"/>
                             <constraint firstItem="Gva-C7-2Ar" firstAttribute="top" secondItem="IUK-5b-ULf" secondAttribute="top" constant="8" id="KyO-VJ-dGJ"/>
                             <constraint firstItem="lkw-J7-7a7" firstAttribute="leading" secondItem="Gva-C7-2Ar" secondAttribute="trailing" constant="8" id="Urh-UC-jFO"/>
+                            <constraint firstItem="kIT-3k-FPN" firstAttribute="centerX" secondItem="lkw-J7-7a7" secondAttribute="centerX" id="cGX-A1-xQt"/>
                             <constraint firstItem="IUK-5b-ULf" firstAttribute="trailing" secondItem="lkw-J7-7a7" secondAttribute="trailing" constant="16" id="dDl-uC-rRW"/>
                             <constraint firstItem="IUK-5b-ULf" firstAttribute="bottom" secondItem="Gva-C7-2Ar" secondAttribute="bottom" constant="8" id="uSZ-Wc-zTm"/>
                             <constraint firstItem="Gva-C7-2Ar" firstAttribute="leading" secondItem="IUK-5b-ULf" secondAttribute="leading" constant="16" id="ybR-6s-aa8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="7NF-fk-e2W"/>
+                    <navigationItem key="navigationItem" id="7NF-fk-e2W">
+                        <barButtonItem key="rightBarButtonItem" title="Edit Item" id="VDB-YE-oW8">
+                            <connections>
+                                <action selector="editItemButtonPressed:" destination="HaU-2a-Yka" id="Are-0T-0W5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageItem" destination="lkw-J7-7a7" id="ubp-Aa-EBV"/>
                         <outlet property="nutritionItem" destination="uBz-Qf-TEd" id="esR-U1-jus"/>
                         <outlet property="titleItem" destination="CuI-9g-kqk" id="Bwz-Vc-XdB"/>
+                        <segue destination="s0Y-Vf-NoR" kind="show" identifier="goToEditItemVC" id="A8o-YC-GPT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jmr-vL-qHS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1545.8015267175572" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="1714" y="326"/>
+        </scene>
+        <!--Edit Item View Controller-->
+        <scene sceneID="ZO4-HO-Y9Q">
+            <objects>
+                <viewController id="s0Y-Vf-NoR" customClass="EditItemViewController" customModule="UITableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uex-eP-G41">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vvE-ik-8jj">
+                                <rect key="frame" x="16" y="103" width="361" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Item: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQc-CY-wfn">
+                                        <rect key="frame" x="0.0" y="0.0" width="118.33333333333333" height="34"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8fH-z0-afh">
+                                        <rect key="frame" x="126.33333333333336" y="0.0" width="234.66666666666663" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTg-Sw-qF4">
+                                <rect key="frame" x="297" y="145" width="80" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="2By-X0-nlf"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="9Fv-Gk-5eW"/>
+                                    <constraint firstAttribute="width" constant="80" id="CsM-8U-80a"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="c9S-zO-X41"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Edit"/>
+                                <connections>
+                                    <action selector="editButtonPressed:" destination="s0Y-Vf-NoR" eventType="touchUpInside" id="oRG-gu-yuh"/>
+                                    <action selector="saveItem:" destination="W1I-3s-IDT" eventType="touchUpInside" id="NJw-rk-xMc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="P3r-6O-vAc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="P3r-6O-vAc" firstAttribute="trailing" secondItem="vvE-ik-8jj" secondAttribute="trailing" constant="16" id="0WL-D1-6pg"/>
+                            <constraint firstItem="vvE-ik-8jj" firstAttribute="top" secondItem="P3r-6O-vAc" secondAttribute="top" id="64m-Wc-QGu"/>
+                            <constraint firstItem="vvE-ik-8jj" firstAttribute="leading" secondItem="P3r-6O-vAc" secondAttribute="leading" constant="16" id="DDZ-fr-Bqq"/>
+                            <constraint firstItem="LTg-Sw-qF4" firstAttribute="top" secondItem="vvE-ik-8jj" secondAttribute="bottom" constant="8" id="bfF-ne-FjK"/>
+                            <constraint firstItem="P3r-6O-vAc" firstAttribute="trailing" secondItem="LTg-Sw-qF4" secondAttribute="trailing" constant="16" id="zXd-ld-m5K"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="E6O-ws-kxg"/>
+                    <connections>
+                        <outlet property="textField" destination="8fH-z0-afh" id="VY8-D2-IrE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2NH-a4-Zbp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2498" y="325"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zDs-48-7wL">

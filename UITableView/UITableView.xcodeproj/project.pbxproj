@@ -64,6 +64,9 @@
 		9EF4E3A52AFCFABF00CE17B7 /* EditRows.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EF4E3A42AFCFABF00CE17B7 /* EditRows.storyboard */; };
 		9EF4E3A72AFCFACB00CE17B7 /* EditRowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF4E3A62AFCFACB00CE17B7 /* EditRowsViewController.swift */; };
 		9EF4E3A92AFCFC6400CE17B7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF4E3A82AFCFC6400CE17B7 /* DetailViewController.swift */; };
+		9EF4E3E92AFDC93700CE17B7 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF4E3E82AFDC93700CE17B7 /* AddItemViewController.swift */; };
+		9EF4E3EB2AFDD3E800CE17B7 /* FoodDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF4E3EA2AFDD3E800CE17B7 /* FoodDataSource.swift */; };
+		9EF4E3ED2AFDEF2F00CE17B7 /* EditItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF4E3EC2AFDEF2F00CE17B7 /* EditItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +129,9 @@
 		9EF4E3A42AFCFABF00CE17B7 /* EditRows.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditRows.storyboard; sourceTree = "<group>"; };
 		9EF4E3A62AFCFACB00CE17B7 /* EditRowsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRowsViewController.swift; sourceTree = "<group>"; };
 		9EF4E3A82AFCFC6400CE17B7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9EF4E3E82AFDC93700CE17B7 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		9EF4E3EA2AFDD3E800CE17B7 /* FoodDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDataSource.swift; sourceTree = "<group>"; };
+		9EF4E3EC2AFDEF2F00CE17B7 /* EditItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -392,6 +398,9 @@
 				9EF4E3A42AFCFABF00CE17B7 /* EditRows.storyboard */,
 				9EF4E3A62AFCFACB00CE17B7 /* EditRowsViewController.swift */,
 				9EF4E3A82AFCFC6400CE17B7 /* DetailViewController.swift */,
+				9EF4E3E82AFDC93700CE17B7 /* AddItemViewController.swift */,
+				9EF4E3EC2AFDEF2F00CE17B7 /* EditItemViewController.swift */,
+				9EF4E3EA2AFDD3E800CE17B7 /* FoodDataSource.swift */,
 			);
 			path = "Edit Rows";
 			sourceTree = "<group>";
@@ -489,11 +498,13 @@
 			files = (
 				9EF4E3A72AFCFACB00CE17B7 /* EditRowsViewController.swift in Sources */,
 				9EF4E3A92AFCFC6400CE17B7 /* DetailViewController.swift in Sources */,
+				9EF4E3EB2AFDD3E800CE17B7 /* FoodDataSource.swift in Sources */,
 				9E385C0B2AFBB48A00E155EB /* BackgroundViewController.swift in Sources */,
 				9EF218742AF7758200189DF9 /* CustomCellTableViewController.swift in Sources */,
 				9EF4E3972AFCC2C300CE17B7 /* CustomFoodCell.swift in Sources */,
 				9EF2188B2AF776D800189DF9 /* ReorderingViewController.swift in Sources */,
 				9E3FB3F92AF7D5B300EE21E7 /* SwitchTableViewCell.swift in Sources */,
+				9EF4E3ED2AFDEF2F00CE17B7 /* EditItemViewController.swift in Sources */,
 				9E385C0E2AFBB9EC00E155EB /* StateViewController.swift in Sources */,
 				9E385C062AFBA8E000E155EB /* DiffableDataSourceViewController.swift in Sources */,
 				9E485CA52AFB692D00FE59E7 /* CustomTableViewCell.swift in Sources */,
@@ -512,6 +523,7 @@
 				9EF218832AF7761D00189DF9 /* MultiSelectionViewController.swift in Sources */,
 				9E385C012AFBA56400E155EB /* ApplicationData.swift in Sources */,
 				9E385C1C2AFBCC1700E155EB /* CustomCellConfigViewController.swift in Sources */,
+				9EF4E3E92AFDC93700CE17B7 /* AddItemViewController.swift in Sources */,
 				9EF218682AF7751C00189DF9 /* SeperatorViewController.swift in Sources */,
 				9EF218902AF7770000189DF9 /* SwipeActionViewController.swift in Sources */,
 				9EF218652AF774D900189DF9 /* MultiSectionViewController.swift in Sources */,
