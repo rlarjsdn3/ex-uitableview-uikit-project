@@ -33,7 +33,7 @@ class CellSubclassViewController: UIViewController {
     }
     
     func prepareSnapshot() {
-        var snapshot = NSDiffableDataSourceSnapshot<Sections, ItemsData.ID>()
+        var snapshot = NSDiffableDataSourceSnapshot<Sections, FoodsData.ID>()
         snapshot.appendSections([.main])
         snapshot.appendItems(appData.items.map({ $0.id }))
         appData.dataSource.apply(snapshot)

@@ -24,7 +24,7 @@ class DiffableDataSourceViewController: UIViewController {
     func prepareDataSource() {
         // ⭐️ 이 클래스는 원본 데이터와 함께 셀을 구성함.
         // 각 제네릭 타입은 Hashable 프로토콜을 준수하는 섹션과 아이템을 나타내는 타입이어야 함.
-        appData.dataSource = UITableViewDiffableDataSource<Sections, ItemsData.ID>(tableView: tableView) { tableView, indexPath, itemID in
+        appData.dataSource = UITableViewDiffableDataSource<Sections, FoodsData.ID>(tableView: tableView) { tableView, indexPath, itemID in
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
             
             if let item = self.appData.items.first(where: { $0.id == itemID }) {
@@ -44,7 +44,7 @@ class DiffableDataSourceViewController: UIViewController {
     func prepareSnapshot() {
         // ⭐️ 이 클래스는 현재 UI의 상태를 의미함.
         // 스냅샷을 통해 셀 추가, 삭제 및 이동 연산을 수행한 결과를 DataSource에 Apply를 하면 변경 사항이 적용됨.
-        var snapshot = NSDiffableDataSourceSnapshot<Sections, ItemsData.ID>()
+        var snapshot = NSDiffableDataSourceSnapshot<Sections, FoodsData.ID>()
         snapshot.appendSections([.main])
         snapshot.appendItems(appData.items.map({ $0.id }))
         appData.dataSource.apply(snapshot)

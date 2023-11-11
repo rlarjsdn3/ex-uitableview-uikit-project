@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9E0F9A482AFF3DB700799424 /* ApplicationSectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0F9A472AFF3DB700799424 /* ApplicationSectionData.swift */; };
+		9E0F9A4C2AFF780800799424 /* MySectionDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0F9A4B2AFF780800799424 /* MySectionDatasource.swift */; };
 		9E385C012AFBA56400E155EB /* ApplicationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E385C002AFBA56400E155EB /* ApplicationData.swift */; };
 		9E385C042AFBA8D000E155EB /* DiffableDataSource.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E385C032AFBA8D000E155EB /* DiffableDataSource.storyboard */; };
 		9E385C062AFBA8E000E155EB /* DiffableDataSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E385C052AFBA8E000E155EB /* DiffableDataSourceViewController.swift */; };
@@ -78,6 +79,7 @@
 
 /* Begin PBXFileReference section */
 		9E0F9A472AFF3DB700799424 /* ApplicationSectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationSectionData.swift; sourceTree = "<group>"; };
+		9E0F9A4B2AFF780800799424 /* MySectionDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySectionDatasource.swift; sourceTree = "<group>"; };
 		9E385C002AFBA56400E155EB /* ApplicationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationData.swift; sourceTree = "<group>"; };
 		9E385C032AFBA8D000E155EB /* DiffableDataSource.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiffableDataSource.storyboard; sourceTree = "<group>"; };
 		9E385C052AFBA8E000E155EB /* DiffableDataSourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableDataSourceViewController.swift; sourceTree = "<group>"; };
@@ -446,6 +448,7 @@
 			children = (
 				9EF4E3FB2AFDF29B00CE17B7 /* Sections.storyboard */,
 				9EF4E3F92AFDF29700CE17B7 /* SectionsTableViewController.swift */,
+				9E0F9A4B2AFF780800799424 /* MySectionDatasource.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -570,6 +573,7 @@
 				9EF218862AF776B500189DF9 /* EditModeViewController.swift in Sources */,
 				9EF218772AF775BA00189DF9 /* SectionIndexViewController.swift in Sources */,
 				9EF2185A2AF773BD00189DF9 /* RandomNumber.swift in Sources */,
+				9E0F9A4C2AFF780800799424 /* MySectionDatasource.swift in Sources */,
 				9E385C132AFBC81800E155EB /* CellSubclassViewController.swift in Sources */,
 				9EF218832AF7761D00189DF9 /* MultiSelectionViewController.swift in Sources */,
 				9E385C012AFBA56400E155EB /* ApplicationData.swift in Sources */,

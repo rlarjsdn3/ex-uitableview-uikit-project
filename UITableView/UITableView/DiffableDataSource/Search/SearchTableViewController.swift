@@ -7,10 +7,11 @@
 
 import UIKit
 
+
 class SearchTableViewController: UITableViewController {
 
-    typealias MyDataSource = UITableViewDiffableDataSource<Sections, ItemsData.ID>
-    typealias MySnapshot = NSDiffableDataSourceSnapshot<Sections, ItemsData.ID>
+    typealias MyDataSource = UITableViewDiffableDataSource<Sections, FoodsData.ID>
+    typealias MySnapshot = NSDiffableDataSourceSnapshot<Sections, FoodsData.ID>
     
     var appData: ApplicationData = ApplicationData()
     

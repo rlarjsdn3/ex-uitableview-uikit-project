@@ -29,7 +29,7 @@ class AddItemViewController: UIViewController {
             AppData.items.append(itemData)
             
             // 이렇게 만들어진 새로운 스냅샷을 데이터 소스에 적용함.
-            var snapshot = NSDiffableDataSourceSnapshot<Sections, ItemsData.ID>()
+            var snapshot = NSDiffableDataSourceSnapshot<Sections, FoodsData.ID>()
             snapshot.appendSections([.main])
             snapshot.appendItems(AppData.items.map { $0.id })
             AppData.dataSource.apply(snapshot)

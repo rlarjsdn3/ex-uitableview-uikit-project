@@ -25,7 +25,7 @@ class StateViewController: UIViewController {
     }
     
     func prepareDataSource() {
-        appData.dataSource = UITableViewDiffableDataSource<Sections, ItemsData.ID>(tableView: tableView) { tableView, indexPath, itemID in
+        appData.dataSource = UITableViewDiffableDataSource<Sections, FoodsData.ID>(tableView: tableView) { tableView, indexPath, itemID in
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
             
             if let item = self.appData.items.first(where: { $0.id == itemID }) {
@@ -56,7 +56,7 @@ class StateViewController: UIViewController {
     }
     
     func prepareSnapshot() {
-        var snapshot = NSDiffableDataSourceSnapshot<Sections, ItemsData.ID>()
+        var snapshot = NSDiffableDataSourceSnapshot<Sections, FoodsData.ID>()
         snapshot.appendSections([.main])
         snapshot.appendItems(appData.items.map({ $0.id }))
         appData.dataSource.apply(snapshot)

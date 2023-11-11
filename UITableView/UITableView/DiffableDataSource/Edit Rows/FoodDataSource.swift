@@ -8,7 +8,7 @@
 import UIKit
 
 // ⭐️ UITableViewDiffableDataSource 클래스는 UITableViewDataSourceDelegate 프로토콜을 준수하고 있음.
-class FoodDataSource: UITableViewDiffableDataSource<Sections, ItemsData.ID> {
+class FoodDataSource: UITableViewDiffableDataSource<Sections, FoodsData.ID> {
     
     // ⭐️ 셀이 편집 모드로 전환 허용 유무를 결정하는 델리게이트 메서드
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

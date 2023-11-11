@@ -9,8 +9,8 @@ import UIKit
 
 class RefreshControlTableViewController: UITableViewController {
 
-    typealias MyDataSource = UITableViewDiffableDataSource<Sections, ItemsData.ID>
-    typealias MySnapshot = NSDiffableDataSourceSnapshot<Sections, ItemsData.ID>
+    typealias MyDataSource = UITableViewDiffableDataSource<Sections, FoodsData.ID>
+    typealias MySnapshot = NSDiffableDataSourceSnapshot<Sections, FoodsData.ID>
     
     var refresh: UIRefreshControl!
     var appData: ApplicationData = ApplicationData()

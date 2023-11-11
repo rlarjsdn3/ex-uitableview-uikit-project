@@ -54,7 +54,7 @@ class EditRowsViewController: UIViewController {
     }
     
     func prepareSnapshot() {
-        var snapshot = NSDiffableDataSourceSnapshot<Sections, ItemsData.ID>()
+        var snapshot = NSDiffableDataSourceSnapshot<Sections, FoodsData.ID>()
         snapshot.appendSections([.main])
         snapshot.appendItems(AppData.items.map { $0.id })
         AppData.dataSource.apply(snapshot)
