@@ -9,81 +9,54 @@ import UIKit
 
 class RefreshControlTableViewController: UITableViewController {
 
+    typealias MyDataSource = UITableViewDiffableDataSource<Sections, ItemsData.ID>
+    typealias MySnapshot = NSDiffableDataSourceSnapshot<Sections, ItemsData.ID>
+    
+    var refresh: UIRefreshControl!
+    var appData: ApplicationData = ApplicationData()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        prepareDatasource()
+        prepareSnapshot()
+        
+        refresh = UIRefreshControl()
+        refresh.addAction(UIAction(handler: { [unowned self] action in
+            self.refreshTable()
+        }), for: .valueChanged)
+        
+        let text = AttributedString("Refreshing Table")
+        refresh.attributedTitle = NSAttributedString(text)
+        tableView.refreshControl = refresh
+        
+        navigationItem.title = "Refresh Control"
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    
+    func prepareDatasource() {
+        appData.dataSource = MyDataSource(tableView: tableView){ tableView, indexPath, itemID in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+            
+            if let item = self.appData.items.first(where: { $0.id == itemID }) {
+                var contentConfig = cell.defaultContentConfiguration()
+                contentConfig.text = item.name
+                cell.contentConfiguration = contentConfig
+            }
+            return cell
+        }
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    
+    func prepareSnapshot() {
+        var snapshot = MySnapshot()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(appData.items.map { $0.id })
+        appData.dataSource.apply(snapshot)
     }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+    
+    func refreshTable() {
+        self.prepareSnapshot()
+        refresh.endRefreshing()
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

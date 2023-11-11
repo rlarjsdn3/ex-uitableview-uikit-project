@@ -9,81 +9,79 @@ import UIKit
 
 class SearchTableViewController: UITableViewController {
 
+    typealias MyDataSource = UITableViewDiffableDataSource<Sections, ItemsData.ID>
+    typealias MySnapshot = NSDiffableDataSourceSnapshot<Sections, ItemsData.ID>
+    
+    var appData: ApplicationData = ApplicationData()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        prepareDatasource()
+        prepareSnapshot()
+        
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        // ⭐️ 검색 바를 클릭하면 화면을 흐리게 할지 말지 결정함.
+        searchController.obscuresBackgroundDuringPresentation = false
+        // ⭐️ 검색 바를 클릭하면 네비게이션 바를 숨길지 말지 결정함.
+        searchController.hidesNavigationBarDuringPresentation = true
+        // ⭐️ 테이블 뷰를 스크롤하면 검색 바를 숨길지 말지 결정함.
+        navigationItem.hidesSearchBarWhenScrolling = false
+        navigationItem.searchController = searchController
+        navigationItem.title = "Search"
+        
+        let searchBar = searchController.searchBar
+        searchBar.delegate = self
+        searchBar.placeholder = "Search Product"
+        searchBar.showsScopeBar = true
+        searchBar.scopeButtonTitles = ["Names", "Calories"]
+        searchBar.selectedScopeButtonIndex = 0
+    }
+    
+    func prepareDatasource() {
+        appData.dataSource = MyDataSource(tableView: tableView){ tableView, indexPath, itemID in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+            
+            if let item = self.appData.items.first(where: { $0.id == itemID }) {
+                var contentConfig = cell.defaultContentConfiguration()
+                contentConfig.text = item.name
+                cell.contentConfiguration = contentConfig
+            }
+            return cell
+        }
+    }
+    
+    func prepareSnapshot() {
+        var snapshot = MySnapshot()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(appData.filteredItems.map { $0.id })
+        appData.dataSource.apply(snapshot, animatingDifferences: false, completion: nil)
     }
 
-    // MARK: - Table view data source
+}
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+extension SearchTableViewController: UISearchResultsUpdating {
+    
+    // ⭐️ 검색 바에 입력을 할 때마다 호출되는 델리게이트 메서드
+    func updateSearchResults(for searchController: UISearchController) {
+        if let text = searchController.searchBar.text {
+            appData.searchValue = text.trimmingCharacters(in: .whitespaces)
+            prepareSnapshot()
+        }
     }
+    
+}
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+extension SearchTableViewController: UISearchBarDelegate {
+    
+    // ⭐️ ScopeButton 인덱스 값이 달라질 때마다 호출되는 델리게이트 메서드
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        appData.selectedButton = selectedScope
+        prepareSnapshot()
+        searchBar.placeholder = selectedScope == 0 ? "Search Product" : "Maximum Calories"
+        searchBar.text = ""
     }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

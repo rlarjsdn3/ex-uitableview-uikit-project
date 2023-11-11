@@ -418,6 +418,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="yIa-ro-paO" kind="show" id="HEF-0l-f3w"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="MIS-Go-VSR" style="IBUITableViewCellStyleDefault" id="9hs-xc-XlM">
                                         <rect key="frame" x="0.0" y="1021.3333587646484" width="393" height="44.666667938232422"/>
@@ -435,6 +438,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="A1Y-sH-pIA" kind="show" id="JBS-IT-i7D"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="2XN-nC-q7J" style="IBUITableViewCellStyleDefault" id="snO-mk-q6N">
                                         <rect key="frame" x="0.0" y="1066.0000267028809" width="393" height="44.666667938232422"/>
@@ -452,6 +458,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="nBZ-8H-rdT" kind="show" id="laf-xe-jz5"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -657,6 +666,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SlG-NZ-8uk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1689" y="341"/>
+        </scene>
+        <!--RefreshControl-->
+        <scene sceneID="iVn-gk-jQ8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RefreshControl" id="yIa-ro-paO" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hjh-cd-7kD"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uuv-oZ-mxa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1713" y="388"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="Ekz-Ok-ade">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Search" id="A1Y-sH-pIA" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="2m6-gp-aKK"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aR2-8z-VN4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1677" y="432"/>
+        </scene>
+        <!--Sections-->
+        <scene sceneID="seb-1d-Ev6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Sections" id="nBZ-8H-rdT" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="uSV-UR-3aa"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f9b-Op-Mzn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1683" y="477"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HQ9-FZ-2e2">

@@ -35,6 +35,31 @@ struct ApplicationData {
         }
     }
     
+    var searchValue: String = ""
+    var selectedButton: Int = 0
+    var filteredItems: [ItemsData] {
+        get {
+            if searchValue.isEmpty {
+                return items
+            } else {
+                var list = items.filter { (item) -> Bool in
+                    if selectedButton == 0 {
+                        let value1 = item.name.lowercased()
+                        let value2 = searchValue.lowercased()
+                        return value1.hasPrefix(value2)
+                    } else {
+                        if let maximum = Int(searchValue), item.calories < maximum {
+                            return true
+                        }
+                        return false
+                    }
+                }
+                list.sort(by: { $0.name < $1.name })
+                return list
+            }
+        }
+    }
+    
     init() {
         items.append(ItemsData("Bagels", "bagels", 250, false))
         items.append(ItemsData("Brownies", "brownies", 466, false))

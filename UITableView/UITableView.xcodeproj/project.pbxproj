@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E0F9A482AFF3DB700799424 /* ApplicationSectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0F9A472AFF3DB700799424 /* ApplicationSectionData.swift */; };
 		9E385C012AFBA56400E155EB /* ApplicationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E385C002AFBA56400E155EB /* ApplicationData.swift */; };
 		9E385C042AFBA8D000E155EB /* DiffableDataSource.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E385C032AFBA8D000E155EB /* DiffableDataSource.storyboard */; };
 		9E385C062AFBA8E000E155EB /* DiffableDataSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E385C052AFBA8E000E155EB /* DiffableDataSourceViewController.swift */; };
@@ -76,6 +77,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E0F9A472AFF3DB700799424 /* ApplicationSectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationSectionData.swift; sourceTree = "<group>"; };
 		9E385C002AFBA56400E155EB /* ApplicationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationData.swift; sourceTree = "<group>"; };
 		9E385C032AFBA8D000E155EB /* DiffableDataSource.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiffableDataSource.storyboard; sourceTree = "<group>"; };
 		9E385C052AFBA8E000E155EB /* DiffableDataSourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableDataSourceViewController.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 				9E3FB3F62AF7C93300EE21E7 /* PhotosSettingItem.swift */,
 				9E485C9D2AFB633000FE59E7 /* Landscape.swift */,
 				9E385C002AFBA56400E155EB /* ApplicationData.swift */,
+				9E0F9A472AFF3DB700799424 /* ApplicationSectionData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 				9EF4E39C2AFCCBD200CE17B7 /* CustomConfigViewController.swift in Sources */,
 				9EF218972AF7773000189DF9 /* PrefetchingViewController.swift in Sources */,
 				9EF4E3A22AFCF56900CE17B7 /* CustomConfigFoodCell.swift in Sources */,
+				9E0F9A482AFF3DB700799424 /* ApplicationSectionData.swift in Sources */,
 				9EF218482AF7726000189DF9 /* SceneDelegate.swift in Sources */,
 				9EF218862AF776B500189DF9 /* EditModeViewController.swift in Sources */,
 				9EF218772AF775BA00189DF9 /* SectionIndexViewController.swift in Sources */,
